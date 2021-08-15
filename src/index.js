@@ -10,7 +10,7 @@ window.TrelloPowerUp.initialize({
     return [
       {
         icon: pomorello_icon,
-        text: "Pomorello",
+        text: "Sense Track",
         callback: async new_t => MainMenu(new_t)
       }
     ];
