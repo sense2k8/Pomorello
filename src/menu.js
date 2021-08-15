@@ -9,6 +9,11 @@ export function SetMenu(t, state) {
     text: "Short Set " + "15m active, 3m break, 9m long break".replace(/ /g, '\xa0'),
     callback: new_t => Start(new_t, state, 15, 3)
   };
+  
+  const custom_set = {
+    text: "custom Set " + "5m active, 1m break, 5m long break".replace(/ /g, '\xa0'),
+    callback: new_t => Start(new_t, state, 5, 1)
+  };
 
   const med_set = {
     text: "Standard Set " + "25m active, 5m break, 15m long break".replace(/ /g, '\xa0'),
@@ -32,6 +37,7 @@ export function SetMenu(t, state) {
     title: "Start a Pomodoro",
 
     items: [
+      custom_set,
       short_set,
       med_set,
       long_set,
@@ -75,7 +81,7 @@ export async function MainMenu(t) {
   };
 
   return t.popup({
-    title: "Pomorello Menu",
+    title: "Sense Track Pomorello Menu",
 
     items: [
       start,
